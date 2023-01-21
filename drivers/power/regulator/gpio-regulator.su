@@ -1,0 +1,5 @@
+gpio-regulator.c:127:12:gpio_regulator_set_enable	16	static
+gpio-regulator.c:121:12:gpio_regulator_get_enable	8	static
+gpio-regulator.c:95:12:gpio_regulator_set_value	16	static
+gpio-regulator.c:73:12:gpio_regulator_get_value	16	static
+gpio-regulator.c:28:12:gpio_regulator_ofdata_to_platdata	64	static

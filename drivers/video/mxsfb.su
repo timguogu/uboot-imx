@@ -1,0 +1,4 @@
+mxsfb.c:599:12:mxs_video_bind	8	static
+mxsfb.c:609:12:mxs_video_remove	16	static
+mxsfb.c:54:13:mxsfb_system_setup	0	static
+mxsfb.c:476:12:mxs_video_probe	192	static
