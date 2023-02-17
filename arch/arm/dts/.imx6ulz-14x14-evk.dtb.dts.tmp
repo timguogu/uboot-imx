@@ -1331,7 +1331,7 @@
  pinctrl-0 = <&pinctrl_enet1>;
  phy-mode = "rmii";
  phy-handle = <&ethphy0>;
- status = "okay";
+ status = "disabled";
 };
 
 &fec2 {
@@ -1339,6 +1339,8 @@
  pinctrl-0 = <&pinctrl_enet2>;
  phy-mode = "rmii";
  phy-handle = <&ethphy1>;
+ phy-reset-gpios = <&gpio5 6 1>;
+ phy-rest-duration=<26>;
  status = "okay";
 
  mdio {
@@ -1346,15 +1348,15 @@
   #size-cells = <0>;
 
   ethphy0: ethernet-phy@2 {
-   reg = <2>;
-   micrel,led-mode = <1>;
+   reg = <0>;
+
    clocks = <&clks 44>;
    clock-names = "rmii-ref";
   };
 
   ethphy1: ethernet-phy@1 {
    reg = <1>;
-   micrel,led-mode = <1>;
+
    clocks = <&clks 45>;
    clock-names = "rmii-ref";
   };
@@ -1650,6 +1652,8 @@
    0x0110 0x039c 0x0000 0 0 0x79
 
    0x0040 0x02cc 0x0000 5 0 0x79
+
+   0x0020 0x0064 0x0000 0x5 0x0 0x79
   >;
  };
 
