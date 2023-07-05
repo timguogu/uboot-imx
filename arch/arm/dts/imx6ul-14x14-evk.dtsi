@@ -92,7 +92,7 @@
 	phy-mode = "rmii";
 	phy-handle = <&ethphy1>;
 	phy-reset-gpios = <&gpio5 6 GPIO_ACTIVE_LOW>;
-	phy-rest-duration=<26>;
+	phy-reset-duration=<26>;
 	status = "okay";
 
 	mdio {
